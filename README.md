@@ -10,7 +10,7 @@ curl -v --insecure -X POST -H "Content-Type: application/json" -d
 '{"command":"setWanPortSt","proto":"dhcp","port":"4","vlan_tagged"
 :"1","vlanid":"5","mtu":"; ping 192.168.1.220;","data":"hi"}'
 https://192.168.1.1/ztp/cgi-bin/handler
-</br>
+</br></br>
 curl -v --insecure -X POST -H "Content-Type: application/json" -d
 '{"command":"setWanPortSt","proto":"dhcp","port":"4","vlan_tagged"
 :"1","vlanid":"5","mtu":"; echo myppsmoll;","data":"hi"}'
